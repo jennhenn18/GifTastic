@@ -1,5 +1,7 @@
+// Wait to execute code until DOM has safely loaded 
 $(document).ready(function() {
 
+  // array variable that stores animal names. These animal names display upon page load as default animal buttons
   var animals = [
     "dog", "cat", "rabbit", "hamster", "skunk", "goldfish",
     "bird", "ferret", "turtle", "sugar glider", "chinchilla",
@@ -7,14 +9,21 @@ $(document).ready(function() {
     "capybara", "teacup pig", "serval", "salamander", "frog"
   ];
 
+  // create function that runs that populates buttons dynamically
   function populateButtons(arrayToUse, classToAdd, areaToAddTo) {
+    //areatoAddTo loads empty
     $(areaToAddTo).empty();
 
     for (var i = 0; i < arrayToUse.length; i++) {
+      //create variable to store a buttom html element
       var a = $("<button>");
+      //dot notation adds class to the button html element
       a.addClass(classToAdd);
+      //dot notation adds a data type of the array iteration to the button
       a.attr("data-type", arrayToUse[i]);
+      //dot notation adds the array iteration text to the button
       a.text(arrayToUse[i]);
+      //jquery appends the button 
       $(areaToAddTo).append(a);
     }
 

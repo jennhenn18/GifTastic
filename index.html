@@ -3,27 +3,36 @@
 
 <head>
   <meta charset="UTF-8">
+  <!-- Title of webpage -->
   <title>Animaltastic</title>
+  <!-- CSS file -->
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
-
+<!-- div element with an ID of animal-buttons that is updated dynamically via JavaScript when an animal is added through the form below -->
   <div id="animal-buttons">
 
   </div>
 
+<!-- form element with an ID of animal-form -->
   <form id="animal-form">
+    <!-- Title "Add an animal" that precedes the input text box below -->
     <label for="animal-input">Add an animal</label>
+    <!-- Input field with an id of animal-input, that takes in a string entered by the user. The input here will be passed to JavaScript  -->
     <input type="text" id="animal-input"><br>
+    <!-- Submit button with an id of add-animal -->
     <input id="add-animal" type="submit" value="Submit">
   </form>
 
+  <!-- div element that will be updated dynamically to display the animal photos when an animal button is pressed -->
   <div id="animals">
 
   </div>
-
+<!-- JavaScript and JQuery files -->
+<!-- CDN to link to JQUERY -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- custom JQuery file  -->
   <script src="app.js"></script>
   
 </body>
