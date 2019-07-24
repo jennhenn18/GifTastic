@@ -20,17 +20,21 @@ $(document).ready(function() {
       //dot notation adds class to the button html element
       a.addClass(classToAdd);
       //dot notation adds a data type of the array iteration to the button
+      // ======== not sure what arrayToUse is =======
       a.attr("data-type", arrayToUse[i]);
       //dot notation adds the array iteration text to the button
       a.text(arrayToUse[i]);
-      //jquery appends the button 
+      //use jquery to append the button 
+      // ======== finish this piece =========
       $(areaToAddTo).append(a);
     }
 
   }
-
+  //listen for an onlick event for the button with class animal-buton. When clicked run the following function
   $(document).on("click", ".animal-button", function() {
+   // empty the div html element
     $("#animals").empty();
+    // remove class from div html element 
     $(".animal-button").removeClass("active");
     $(this).addClass("active");
 
