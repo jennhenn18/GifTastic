@@ -1,40 +1,65 @@
+/* styling for the body */
 body {
+  /* set a font size and type */
   font: 18px arial, sans-serif;
+  /* set a background color */
   background: #eee;
 }
 
+/* styling for any element with an ID of animals */
 #animals {
+  /* set the width to 70%*/
   width: 70%;
 }
 
+/* styling for any element with a class of animal-item */
 .animal-item {
+  /* float the element to the left */
   float: left;
+  /* set the padding to 10 pixels*/
   padding: 10px;
 }
 
+/* styling for the form element */
 form {
+  /* float the form to the right */
   float: right;
+  /* set the width to 30%*/
   width: 30%;
+  /* set the padding to 20 pixels*/
   padding: 20px;
 }
 
+/* styling for the text above the input field */
 label {
+  /* make this div element a block element */
   display: block;
+  /* set the bottom margin to be 10 pixels */
   margin-bottom: 10px;
+  /* set the font thickness */
   font-weight: 700;
 }
 
+/* styling for the text the user is entering into the input field */
 input[type="text"] {
+  /* set a width of 100%. This will take up the entire input element */
   width: 100%;
+  /* set a height of 30 pixels */
   height: 30px;
+  /* set the bottom margin to be 10 pixels */
   margin-bottom: 10px;
+  /* set the font size to be 18 pixels */
   font-size: 18px;
 }
 
+/* styling for animal buttons and submit button */
 button,
 input[type="submit"] {
+  /* set the top&bottom padding to 5 pixels. Set the right&left padding to 20 pixels */
   padding: 5px 20px;
+  /* set the top and left margin to 0 pixels. Set the top and right to 10 pixels */
   margin: 0 10px 10px 0;
+  /* set the font size to 18 pixels */
   font-size: 18px;
   color: #fff;
   cursor: pointer;

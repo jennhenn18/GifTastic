@@ -1,7 +1,7 @@
 // Wait to execute code until DOM has safely loaded 
 $(document).ready(function() {
 
-  // array variable that stores animal names. These animal names display upon page load as default animal buttons
+  // Create a variable called animals that stores an array made of strings. These animal names display upon page load as default animal buttons. 
   var animals = [
     "dog", "cat", "rabbit", "hamster", "skunk", "goldfish",
     "bird", "ferret", "turtle", "sugar glider", "chinchilla",
@@ -9,26 +9,22 @@ $(document).ready(function() {
     "capybara", "teacup pig", "serval", "salamander", "frog"
   ];
 
-  // create function that runs that populates buttons dynamically
+  // create function that runs that populates buttons dynamically and pass through the array, class and id of html element to add too
   function populateButtons(arrayToUse, classToAdd, areaToAddTo) {
-    //areatoAddTo loads empty
+    //areatoAddTo loads empty or is cleared
     $(areaToAddTo).empty();
-    console.log("================" + areaToAddTo);
-    console.log("================" + arrayToUse);
-    console.log("================" + classToAdd);
 
+    //loop through animals array for each iteration (string)
     for (var i = 0; i < arrayToUse.length; i++) {
       //create variable to store a buttom html element
       var a = $("<button>");
       //dot notation adds class to the button html element
       a.addClass(classToAdd);
       //dot notation adds a data type of the array iteration to the button
-      // ======== not sure what arrayToUse is =======
       a.attr("data-type", arrayToUse[i]);
       //dot notation adds the array iteration text to the button
       a.text(arrayToUse[i]);
-      //use jquery to append the button 
-      // ======== finish this piece =========
+      //use jquery to append the button to the div element with an ID of animal-buttons
       $(areaToAddTo).append(a);
     }
 
@@ -140,6 +136,7 @@ $(document).ready(function() {
 
   });
 
+  // run the populateButtons functions upon page load passing in the animals array, class to add, and id of the div element to add the buttons too. This will display the default animals reflected in the animal array defined as a global variable.
   populateButtons(animals, "animal-button", "#animal-buttons");
-  // run this function upload page load. This will display the default animals reflected in the animal array defined as a global variable.
+  
 });
